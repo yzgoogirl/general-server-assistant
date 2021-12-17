@@ -18,8 +18,8 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: gstant
-      ports:
-      - 27017:27017
+      
+   
     volumes:
       - /home/admin/data/db:/data/db
       - /etc/localtime:/etc/localtime
