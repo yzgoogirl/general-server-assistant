@@ -8,7 +8,7 @@ services:
       - 9999:9999
       - 3000:3000
     volumes:
-      - ./config:/home/gstant/general-server-assistant/config/
+      - /home/admin/config:/home/gstant/general-server-assistant/config/
     depends_on:
       - mongo-db
   mongo-db:
@@ -18,8 +18,10 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: gstant
+      ports:
+      - 27017:27017
     volumes:
-      - ./data/db:/data/db
+      - /home/admin/data/db:/data/db
       - /etc/localtime:/etc/localtime
     logging:
       driver: "json-file"
