@@ -10,10 +10,10 @@ services:
       - ./config:/home/gstant/general-server-assistant/config/
       - ./plugins:/home/gstant/general-server-assistant/app/plugins
     depends_on:
-      - mongo
+      - mongo-db
   mongo-db:
     image: mongo:4.0
-    container_name: mongo
+    container_name: mongo-db
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
