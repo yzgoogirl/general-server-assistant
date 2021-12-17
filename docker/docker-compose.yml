@@ -20,7 +20,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: gstant
     volumes:
       - ./data/db:/data/db
-      - /etc/localtime:/etc/localtime
+      - ./localtime:/etc/localtime
     logging:
       driver: "json-file"
       options:
