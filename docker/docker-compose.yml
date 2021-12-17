@@ -10,14 +10,14 @@ services:
       - ./config:/home/gstant/general-server-assistant/config/
       - ./plugins:/home/gstant/general-server-assistant/app/plugins
     depends_on:
-      - mongo-db
+      - mongo
   mongo-db:
     image: mongo:4.0
-    container_name: mongo-db
+    container_name: mongo
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: gstant
+      MONGO_INITDB_ROOT_PASSWORD: mongo
     volumes:
       - ./data/db:/data/db
       - /etc/localtime:/etc/localtime
