@@ -7,8 +7,8 @@ services:
     ports:
       - 9999:9999
     volumes:
-      - ./config:/home/gstant/general-server-assistant/config/
-      - ./plugins:/home/gstant/general-server-assistant/app/plugins
+      - ./gstant/config:/home/gstant/general-server-assistant/config/
+      - ./gstant/plugins:/home/gstant/general-server-assistant/app/plugins
     depends_on:
       - mongo-db
   mongo-db:
