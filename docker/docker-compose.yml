@@ -16,8 +16,8 @@ services:
     container_name: mongo-db
     restart: always
     environment:
-      MONGO_INITDB_ROOT_USERNAME: gstant
-      MONGO_INITDB_ROOT_PASSWORD: mongo
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: gstant
     volumes:
       - ./data/db:/data/db
       - /etc/localtime:/etc/localtime
