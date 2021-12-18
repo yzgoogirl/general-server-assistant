@@ -12,7 +12,7 @@ services:
     depends_on:
       - mongo-db
   mongo-db:
-    image: mongo:4.0
+    image: mongo:4.0.26
     container_name: mongo-db
     restart: always
     environment:
