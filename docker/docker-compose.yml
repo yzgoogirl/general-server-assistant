@@ -7,22 +7,20 @@ services:
     ports:
       - 9999:9999
     volumes:
-      - ./gstant/config:/home/gstant/general-server-assistant/config/
-      - ./gstant/plugins:/home/gstant/general-server-assistant/app/plugins
-    privileged: true
+      - ./config:/home/gstant/general-server-assistant/config/
+      - ./plugins:/home/gstant/general-server-assistant/app/plugins
     depends_on:
       - mongo-db
   mongo-db:
-    image: mongo:4.0.26
+    image: mongo:4.0
     container_name: mongo-db
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: mongo
+      MONGO_INITDB_ROOT_PASSWORD: gstant
     volumes:
       - ./data/db:/data/db
       - /etc/localtime:/etc/localtime
-      privileged: true
     logging:
       driver: "json-file"
       options:
