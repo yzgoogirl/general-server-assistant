@@ -6,6 +6,8 @@ services:
     restart: always
     ports:
       - 9999:9999
+    expose:
+      - 9999
     volumes:
       - ./config:/home/gstant/general-server-assistant/config/
       - ./plugins:/home/gstant/general-server-assistant/app/plugins
@@ -26,3 +28,7 @@ services:
       options:
         max-size: "200k"
         max-file: "10"
+networks:
+  default: 
+    external: 
+      name: root_default
