@@ -31,4 +31,4 @@ services:
 networks:
   default: 
     external: 
-      name: root_default
+      name: mynet
