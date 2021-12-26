@@ -1,5 +1,4 @@
 FROM gstant/base
-EXPOSE 8080
 RUN useradd -ms /bin/bash gstant
 WORKDIR  /home/gstant
 RUN git clone --depth=1 https://github.com/gsetant/general-server-assistant/
